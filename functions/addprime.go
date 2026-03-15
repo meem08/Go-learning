@@ -1,12 +1,10 @@
-package main
+package functions
 
-import (
-	"fmt"
-	"os"
-	"strconv"
-)
+// "fmt"
+// "os"
+// "strconv"
 
-func IsPrime(n int) bool {
+func NewPrime(n int) bool {
 	if n < 1 {
 		return false
 	}
@@ -22,21 +20,21 @@ func IsPrime(n int) bool {
 func AddPrime(n int) int {
 	result := 0
 	for i := 2; i <= n; i++ {
-		if IsPrime(i) {
+		if NewPrime(i) {
 			result += i
 		}
 	}
 	return result
 }
 
-func main() {
-	if len(os.Args) != 2 {
-		fmt.Println(0)
-	}
+// func main() {
+// 	if len(os.Args) != 2 {
+// 		fmt.Println(0)
+// 	}
 
-	n, err := strconv.Atoi(os.Args[1])
-	if err != nil || n < 0 {
-		fmt.Println(0)
-		return
-	}
-}
+// 	n, err := strconv.Atoi(os.Args[1])
+// 	if err != nil || n < 0 {
+// 		fmt.Println(0)
+// 		return
+// 	}
+// }
